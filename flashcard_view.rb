@@ -1,28 +1,29 @@
 class DeckViewer
-  initialize(deck)
-  @deck = deck
-  end
 
   def game_welcome_message
-     puts "Welcome to the 'Spectacular RJD Flashcard game'!"
+     puts "Welcome to the 'Spectacular RJD Flashcard game!"
   end
 
   def ask_deck_to_play
-    puts "Enter the number of the deck you'd like to play. If you prefer to exit, enter \"exit\""
+    puts "Enter the name of the deck you'd like to play. If you prefer to exit, enter \"exit\""
   end
 
-  def display_deck_options
-    puts #All of the different options(Gameoptions Array)
+  def display_deck_options(decks_arr)
+    decks_arr.each do |deck|
+      puts "#{deck}"
+      # sleep(2.0)
+    end
+    puts "or type 'Exit' to Quit"
   end
 
-  def deck_welcome_message
-    puts "Welcome to #{deck.name}! To play enter the right term for each definition."
-    puts "Let's get ready to rumble!!!! READY?"
+  def deck_welcome_message(deck)
+    puts "Welcome to #{deck.name}! To advance, enter the correct term for each definition."
+    puts "Let's get ready to rumble!!!!"
   end
 
   def display_card_definition(card)
     puts ""
-    puts "Definition: #{card.current_definition}"
+    puts "Definition: #{card.definition}"
   end
 
   def display_card_guessed_correctly
@@ -30,7 +31,7 @@ class DeckViewer
   end
 
   def display_card_guessed_incorrectly
-    puts "Nope, got it wrong"
+    puts "Nope, got it wrong."
   end
 
   def display_all_cards_guessed
