@@ -21,6 +21,7 @@ class DeckViewer
   end
 
   def display_card_definition(card)
+    puts ""
     puts "Definition: #{card.current_definition}"
   end
 
