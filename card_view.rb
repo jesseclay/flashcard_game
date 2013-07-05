@@ -1,4 +1,10 @@
-new_flashcard_game = Flashcard.new
+
+#puts "Welcome to the 'Spectacular RJD Flashcard game'!"
+#puts "Which one would you like to play?"
+#puts #All of the different options(Gameoptions Array)
+#game_selected = gets.chomp.downcase
+#
+new_flashcard_game = Flashcard.new(game_selected)
 
 
 puts "Welcome to #{new_flashcard_game.name}!  To play enter the right term for each definition."
