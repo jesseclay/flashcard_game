@@ -1,7 +1,10 @@
 class DeckViewer
 
   def game_welcome_message
-     puts "Welcome to the 'Spectacular RJD Flashcard game!"
+    title = File.read('title.txt')
+     puts title
+     puts "RJD Flashcard game!"
+     puts "-----------------------------------------------"
   end
 
   def ask_deck_to_play
@@ -11,14 +14,14 @@ class DeckViewer
   def display_deck_options(decks_arr)
     decks_arr.each do |deck|
       puts "#{deck}"
-      # sleep(2.0)
+      sleep(1.0)
     end
-    puts "or type 'Exit' to Quit"
   end
 
   def deck_welcome_message(deck)
     puts "Welcome to #{deck.name}! To advance, enter the correct term for each definition."
     puts "Let's get ready to rumble!!!!"
+    puts
   end
 
   def display_card_definition(card)
@@ -31,11 +34,13 @@ class DeckViewer
   end
 
   def display_card_guessed_incorrectly
-    puts "Nope, got it wrong."
+    puts "Nope, got it wrong. On to the next card!"
   end
 
   def display_all_cards_guessed
-    puts "Congratulations, you've completed all the cards! Enter \"repeat\" to play this deck again or \"menu\" to return to the main menu:"
+    puts "Congratulations, you've completed all the cards!"
+    sleep(1.0)
+    puts
   end
 
   def display_exit_game_message

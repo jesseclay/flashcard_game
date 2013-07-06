@@ -42,6 +42,5 @@ until deck_selection == "exit"
     end 
   end
   view.display_all_cards_guessed
-  repeat_deck_answer = gets.chomp
 end
 view.display_exit_game_message
