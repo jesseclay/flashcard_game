@@ -25,8 +25,33 @@ class DeckViewer
   end
 
   def display_card_definition(card)
-    puts ""
-    puts "Definition: #{card.definition}"
+    puts " _________________________________________" #40 underscores, 2 spaces, 44 characters total
+    puts "|                                        |"
+    puts "| " + "Current Definition".center(38)+ " |"
+    puts "| ______________________________________ |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "| " + card.current_definition(38) + " |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|                                        |"
+    puts "|________________________________________|"
   end
 
   def display_card_guessed_correctly
