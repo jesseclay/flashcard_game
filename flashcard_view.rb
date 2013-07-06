@@ -24,11 +24,7 @@ class DeckViewer
     puts
   end
 
-<<<<<<< HEAD
-def display_card_definition(card)
-=======
   def display_card_definition(card)
->>>>>>> updated flashcard_view.rb with working ascii
     puts " _______________________________________________________________________________" 
     puts "|                                                                               |"
     puts "| " + "Current Definition".center(77)+ " |"
